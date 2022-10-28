@@ -6,8 +6,8 @@ import docx2txt
 
 
 def pdf_to_txt(pdf_name):
-    # pdf_file="pdf\\"+pdf_name+".pdf"
-    pdf_file=pdf_name+".pdf"
+    pdf_file="pdf\\"+pdf_name+".pdf"
+    # pdf_file=pdf_name+".pdf"
     docx_file="docx\\"+pdf_name+".docx"
     txt_file="txt\\"+pdf_name+".txt"
     parse(pdf_file,docx_file)
@@ -25,7 +25,8 @@ if __name__ == '__main__':
         os.mkdir("docx")
     if not os.path.exists("txt"):
         os.mkdir("txt")
-    path=os.getcwd()
+    # path=os.getcwd()
+    path="pdf"
     file_list=os.listdir(path)
     for file in file_list:
         if file.endswith(".pdf"):
